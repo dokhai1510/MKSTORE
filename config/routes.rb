@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "products/index"
   get "/products", to: "products#index"
 
@@ -14,4 +15,5 @@ put "/products/:id", to: "products#update"
 delete "/products/:id", to: "products#destroy"
   resources :products
   root "products#index"
+  
 end
