@@ -84,6 +84,7 @@ production:
     <<: *default
     database: mkstore_production
     username: mkstore
+    url: <%= ENV['DATABASE_URL'] %>
     password: <%= ENV["MKSTORE_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
