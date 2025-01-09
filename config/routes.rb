@@ -13,7 +13,9 @@ patch "/products/:id", to: "products#update"
 put "/products/:id", to: "products#update"
 
 delete "/products/:id", to: "products#destroy"
-  resources :products
+resources :products do
+  resources :subscribers, only: [ :create ]
+end 
   root "products#index"
-  
+
 end
